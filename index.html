@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>99 — скуп NFT подарков Telegram</title>
+<meta name="description" content="99 — скуп NFT подарков Telegram. Оцениваю подарок за несколько минут, называю цену от рынка и плачу сразу. Сделка напрямую или через гаранта, отзывы открыты.">
+<meta name="theme-color" content="#000000">
+<meta property="og:title" content="99 — скуп NFT подарков Telegram">
+<meta property="og:description" content="Быстрая оценка. Моментальная оплата. Открытая репутация.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://linekerx.github.io/99/">
+<link rel="canonical" href="https://linekerx.github.io/99/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23000'/%3E%3Ctext x='32' y='44' font-family='Arial Black,Arial' font-weight='900' font-size='34' text-anchor='middle' fill='%23fff'%3E99%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800;900&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>
+(function(){var c=document.documentElement.classList,n=navigator,m=function(q){return matchMedia(q).matches};
+c.add("js");
+if(m("(hover:hover) and (pointer:fine)"))c.add("hov");
+/* облегчённый режим: телефоны и слабые компьютеры */
+if((n.hardwareConcurrency||8)<=4||(n.deviceMemory||8)<=4||m("(pointer:coarse)")||m("(prefers-reduced-motion:reduce)"))c.add("lite");
+})();
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Как быстро ты оцениваешь подарок?", "acceptedAnswer": {"@type": "Answer", "text": "Обычно за несколько минут после того, как ты прислал ссылку. Если подарок редкий и рынок по нему тонкий — чуть дольше, но я сразу об этом скажу."}}, {"@type": "Question", "name": "Кто передаёт первым?", "acceptedAnswer": {"@type": "Answer", "text": "Договариваемся до сделки. Если не готов передавать первым — идём через гаранта, это нормальная практика."}}, {"@type": "Question", "name": "От чего зависит цена?", "acceptedAnswer": {"@type": "Answer", "text": "Коллекция, модель, фон, узор, номер и текущий рынок. Чем реже сочетание и чем ликвиднее коллекция — тем выше предложение."}}, {"@type": "Question", "name": "Можно продать сразу много подарков?", "acceptedAnswer": {"@type": "Answer", "text": "Да. Оптом даже удобнее: присылаешь список, получаешь цену за весь пак и закрываем одной сделкой."}}, {"@type": "Question", "name": "Как не нарваться на фейка?", "acceptedAnswer": {"@type": "Answer", "text": "Переходи в личку только по кнопкам с этого сайта и сверяй юзернейм посимвольно. Я никогда не пишу первым с «выгодным предложением»."}}]}</script>
+</head>
+<body class="loading">
+<a class="skip" href="#about">к содержимому</a>
+
+<!-- прелоадер -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="pre-num"><span id="preNum">00</span></div>
+  <div class="pre-bar"><i id="preBar"></i></div>
+  <div class="pre-cap">загрузка репутации</div>
+</div>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<div class="cur" id="cur" aria-hidden="true"></div>
+<div class="cur-ring" id="curRing" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <a href="#top" class="logo" data-hover aria-label="99 — на главную">99<sup>®</sup></a>
+  <nav class="nav-links" aria-label="Разделы">
+    <a href="#about" data-hover>био</a>
+    <a href="#how" data-hover>как это работает</a>
+    <a href="#rep" data-hover>репутация</a>
+    <a href="#reviews" data-hover>отзывы</a>
+    <a href="#faq" data-hover>faq</a>
+  </nav>
+  <a class="btn btn-sm magnetic" data-tg data-hover href="#"><span>написать</span></a>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <canvas id="fx" aria-hidden="true"></canvas>
+    <div class="hero-grid" aria-hidden="true"></div>
+
+    <div class="hero-top mono">
+      <span data-scramble>[ скуп nft подарков ]</span>
+      <span class="live"><i></i>на связи</span>
+      <span data-scramble>[ репутация 5/5 ]</span>
+    </div>
+
+    <div class="hero-num" id="heroNum" aria-hidden="true">
+      <span class="n n1">9</span><span class="n n2">9</span>
+    </div>
+
+    <div class="gift" id="gift" aria-hidden="true">
+      <div class="cube">
+        <i class="f f1"></i><i class="f f2"></i><i class="f f3"></i>
+        <i class="f f4"></i><i class="f f5"></i><i class="f f6"></i>
+      </div>
+      <div class="orbit o1"></div>
+      <div class="orbit o2"></div>
+    </div>
+
+    <div class="hero-bottom">
+      <h1 class="hero-title" data-split>Скупаю NFT подарки. Дорого. Быстро. Честно.</h1>
+      <div class="hero-cta" data-reveal>
+        <a class="btn magnetic" data-tg data-hover href="#"><span>продать подарок</span><b aria-hidden="true">↗</b></a>
+        <a class="btn btn-ghost magnetic" data-hover href="#reviews"><span>смотреть отзывы</span></a>
+      </div>
+    </div>
+
+    <div class="scroll-hint mono" aria-hidden="true"><i></i>скролл</div>
+  </section>
+
+  <!-- бегущая строка -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>скуп nft подарков</span><b>✦</b><span>оценка за минуты</span><b>✦</b><span>оплата сразу</span><b>✦</b><span>репутация 5/5</span><b>✦</b><span>любые коллекции</span><b>✦</b><span>гарант по желанию</span><b>✦</b>
+      <span>скуп nft подарков</span><b>✦</b><span>оценка за минуты</span><b>✦</b><span>оплата сразу</span><b>✦</b><span>репутация 5/5</span><b>✦</b><span>любые коллекции</span><b>✦</b><span>гарант по желанию</span><b>✦</b>
+    </div>
+  </div>
+
+  <!-- БИО -->
+  <section class="sec about" id="about">
+    <div class="sec-head mono"><span>01</span><h2>био</h2></div>
+    <p class="big" data-split>Я — 99. Забираю NFT подарки Telegram, пока другие думают. Называю цену сразу, плачу без задержек и не исчезаю после сделки.</p>
+    <div class="about-grid">
+      <div class="about-card tilt" data-reveal>
+        <div class="mono k">кто</div>
+        <p>Скупщик NFT подарков в Telegram. Один ник, одна репутация — и я ей дорожу больше, чем любой отдельной сделкой.</p>
+      </div>
+      <div class="about-card tilt" data-reveal>
+        <div class="mono k">что</div>
+        <p>Беру улучшенные подарки любых коллекций: от ходовых до редких моделей, фонов и красивых номеров. Поштучно и оптом.</p>
+      </div>
+      <div class="about-card tilt" data-reveal>
+        <div class="mono k">как</div>
+        <p>Без торга ради торга. Цена считается от рынка, а не от настроения. Не подошла — расходимся без обид.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ЧТО СКУПАЮ -->
+  <section class="sec buy">
+    <div class="sec-head mono"><span>02</span><h2>что скупаю</h2></div>
+    <ul class="buy-list">
+      <li data-hover data-reveal><span class="mono">/01</span><h3>Редкие модели</h3><em>низкий % выпадения — выше цена</em></li>
+      <li data-hover data-reveal><span class="mono">/02</span><h3>Фоны и узоры</h3><em>чёрные, однотонные, топовые сочетания</em></li>
+      <li data-hover data-reveal><span class="mono">/03</span><h3>Красивые номера</h3><em>низкие, зеркальные, круглые</em></li>
+      <li data-hover data-reveal><span class="mono">/04</span><h3>Коллекции оптом</h3><em>забираю пачкой — одной сделкой</em></li>
+      <li data-hover data-reveal><span class="mono">/05</span><h3>Флор и ликвид</h3><em>быстрый выкуп по рынку</em></li>
+    </ul>
+  </section>
+
+  <!-- КАК ЭТО РАБОТАЕТ -->
+  <section class="sec how" id="how">
+    <div class="sec-head mono"><span>03</span><span>как это работает</span></div>
+    <h2 class="h2" data-split>Четыре шага до оплаты</h2>
+    <div class="steps">
+      <article class="step tilt" data-reveal>
+        <div class="step-n">01</div>
+        <h3>Пишешь</h3>
+        <p>Кидаешь в личку ссылку на подарок или список того, что хочешь продать.</p>
+      </article>
+      <article class="step tilt" data-reveal>
+        <div class="step-n">02</div>
+        <h3>Оценка</h3>
+        <p>Смотрю модель, фон, узор, номер и рынок. Называю конкретную цену, без «ну давай подумаем».</p>
+      </article>
+      <article class="step tilt" data-reveal>
+        <div class="step-n">03</div>
+        <h3>Сделка</h3>
+        <p>Напрямую или через гаранта — как спокойнее тебе. Условия фиксируем до передачи.</p>
+      </article>
+      <article class="step tilt" data-reveal>
+        <div class="step-n">04</div>
+        <h3>Оплата</h3>
+        <p>TON, USDT или другой удобный способ. Деньги уходят сразу после подтверждения.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- РЕПУТАЦИЯ -->
+  <section class="sec rep invert" id="rep">
+    <div class="sec-head mono"><span>04</span><span>репутация</span></div>
+    <h2 class="h2" data-split>Репутация — это единственное, что нельзя купить</h2>
+    <div class="stats" id="stats"></div>
+    <div class="rules">
+      <div class="rule" data-reveal><b aria-hidden="true">✓</b><div><h3>Гарант — пожалуйста</h3><p>Хочешь через проверенного гаранта — работаем через гаранта.</p></div></div>
+      <div class="rule" data-reveal><b aria-hidden="true">✓</b><div><h3>Открытые отзывы</h3><p>Все отзывы лежат в Telegram, их можно проверить и написать авторам.</p></div></div>
+      <div class="rule" data-reveal><b aria-hidden="true">✓</b><div><h3>Цена не меняется</h3><p>Назвал сумму — столько и получишь. Без «комиссий» в последний момент.</p></div></div>
+      <div class="rule" data-reveal><b aria-hidden="true">✓</b><div><h3>Один аккаунт</h3><p>Пишу только с <strong data-handle>одного ника</strong>. Всё остальное — фейки, сверяй юзернейм.</p></div></div>
+    </div>
+  </section>
+
+  <!-- ОТЗЫВЫ -->
+  <section class="sec reviews" id="reviews">
+    <div class="sec-head mono"><span>05</span><span>отзывы</span><span class="demo-tag" data-demo>примеры карточек — вставь реальные отзывы</span></div>
+    <h2 class="h2" data-split>Что говорят те, кто уже продал</h2>
+    <div class="rv-wrap">
+      <div class="rv-row" id="rvRow1"></div>
+      <div class="rv-row rev" id="rvRow2"></div>
+    </div>
+    <div class="center" data-reveal data-reviews-wrap>
+      <a class="btn btn-ghost magnetic" data-reviews data-hover href="#"><span>все отзывы в telegram</span><b aria-hidden="true">↗</b></a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sec faq" id="faq">
+    <div class="sec-head mono"><span>06</span><span>faq</span></div>
+    <h2 class="h2" data-split>Коротко о главном</h2>
+    <div class="faq-list">
+      <div class="faq-item" data-reveal>
+        <button data-hover type="button" aria-expanded="false" aria-controls="faq1"><span>Как быстро ты оцениваешь подарок?</span><i aria-hidden="true"></i></button>
+        <div class="faq-a" id="faq1"><div><p>Обычно за несколько минут после того, как ты прислал ссылку. Если подарок редкий и рынок по нему тонкий — чуть дольше, но я сразу об этом скажу.</p></div></div>
+      </div>
+      <div class="faq-item" data-reveal>
+        <button data-hover type="button" aria-expanded="false" aria-controls="faq2"><span>Кто передаёт первым?</span><i aria-hidden="true"></i></button>
+        <div class="faq-a" id="faq2"><div><p>Договариваемся до сделки. Если не готов передавать первым — идём через гаранта, это нормальная практика.</p></div></div>
+      </div>
+      <div class="faq-item" data-reveal>
+        <button data-hover type="button" aria-expanded="false" aria-controls="faq3"><span>От чего зависит цена?</span><i aria-hidden="true"></i></button>
+        <div class="faq-a" id="faq3"><div><p>Коллекция, модель, фон, узор, номер и текущий рынок. Чем реже сочетание и чем ликвиднее коллекция — тем выше предложение.</p></div></div>
+      </div>
+      <div class="faq-item" data-reveal>
+        <button data-hover type="button" aria-expanded="false" aria-controls="faq4"><span>Можно продать сразу много подарков?</span><i aria-hidden="true"></i></button>
+        <div class="faq-a" id="faq4"><div><p>Да. Оптом даже удобнее: присылаешь список, получаешь цену за весь пак и закрываем одной сделкой.</p></div></div>
+      </div>
+      <div class="faq-item" data-reveal>
+        <button data-hover type="button" aria-expanded="false" aria-controls="faq5"><span>Как не нарваться на фейка?</span><i aria-hidden="true"></i></button>
+        <div class="faq-a" id="faq5"><div><p>Переходи в личку только по кнопкам с этого сайта и сверяй юзернейм посимвольно. Я никогда не пишу первым с «выгодным предложением».</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="cta-marquee" aria-hidden="true">
+      <div class="cta-track"><span>продай подарок</span><span class="o">продай подарок</span><span>продай подарок</span><span class="o">продай подарок</span></div>
+    </div>
+    <p class="mono" data-reveal>ссылка на подарок → цена → оплата</p>
+    <a class="btn btn-xl magnetic" data-tg data-hover href="#"><span>написать 99</span><b aria-hidden="true">↗</b></a>
+  </section>
+</main>
+
+<footer class="footer mono">
+  <span>99® — скуп nft подарков · <span data-handle></span></span>
+  <span id="clock">—</span>
+  <a href="#top" data-hover>наверх ↑</a>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

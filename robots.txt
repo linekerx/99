@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://linekerx.github.io/99/sitemap.xml
