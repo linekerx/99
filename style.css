@@ -19,7 +19,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .invert :focus-visible{outline-color:#000}
 .sec-head h2{font:inherit;letter-spacing:inherit}
 /* без JS сайт остаётся читаемым */
-html:not(.js) .preloader,html:not(.js) .cur{display:none}
+html:not(.js) .preloader{display:none}
 html:not(.js) body{overflow:auto}
 html:not(.js) [data-reveal]{opacity:1;transform:none}
 .mono{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
@@ -39,17 +39,7 @@ html:not(.js) [data-reveal]{opacity:1;transform:none}
   animation:grain 1s steps(6) infinite}
 @keyframes grain{0%{transform:translate(0,0)}20%{transform:translate(-4%,3%)}40%{transform:translate(3%,-5%)}60%{transform:translate(-2%,4%)}80%{transform:translate(5%,-2%)}100%{transform:translate(0,0)}}
 .progress{position:fixed;top:0;left:0;height:2px;width:100%;background:#fff;z-index:80;transform:scaleX(0);transform-origin:left;mix-blend-mode:difference}
-/* курсор: белый с чёрной обводкой — виден и на чёрном, и на белом, без режимов наложения */
-.cur{position:fixed;top:0;left:0;z-index:2147483647;pointer-events:none;display:none;opacity:0;width:10px;height:10px;margin:-5px 0 0 -5px;border-radius:50%;background:#fff;box-shadow:0 0 0 2px #000,0 0 0 3px #fff;transition:opacity .3s,scale .2s var(--ease)}
-html.moved .cur{opacity:1}
-.cur.on{scale:1.5}
-.cur.down{scale:.75}
 [data-handle]{text-transform:none}
-@media (hover:hover) and (pointer:fine){
-  .cur{display:block}
-  body,a,button{cursor:none}
-}
-
 /* ---------- навигация ---------- */
 .nav{position:fixed;top:0;left:0;right:0;z-index:70;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px var(--pad);mix-blend-mode:difference;transition:transform .5s var(--ease)}
 .nav.hide{transform:translateY(-110%)}

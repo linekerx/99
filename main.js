@@ -159,19 +159,9 @@ function startObservers() {
   })(t0);
 })();
 
-/* курсор */
+/* позиция мыши (для параллакса и частиц) */
 const mouse = { x: innerWidth / 2, y: innerHeight / 2 };
 addEventListener("pointermove", (e) => { mouse.x = e.clientX; mouse.y = e.clientY; }, { passive: true });
-if (fine) {
-  const cur = $("#cur");
-  let queued = false;
-  const draw = () => { queued = false; cur.style.transform = `translate3d(${mouse.x}px,${mouse.y}px,0)`; };
-  addEventListener("pointermove", () => { root.classList.add("moved"); if (!queued) { queued = true; requestAnimationFrame(draw); } }, { passive: true });
-  document.addEventListener("mouseover", (e) => cur.classList.toggle("on", !!e.target.closest("[data-hover]")));
-  addEventListener("pointerdown", () => cur.classList.add("down"));
-  addEventListener("pointerup", () => cur.classList.remove("down"));
-  document.addEventListener("mouseleave", () => root.classList.remove("moved"));
-}
 
 /* магнитные кнопки */
 if (fine && !reduced) {
