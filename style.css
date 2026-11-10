@@ -19,7 +19,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .invert :focus-visible{outline-color:#000}
 .sec-head h2{font:inherit;letter-spacing:inherit}
 /* без JS сайт остаётся читаемым */
-html:not(.js) .preloader,html:not(.js) .cur,html:not(.js) .cur-ring{display:none}
+html:not(.js) .preloader,html:not(.js) .cur{display:none}
 html:not(.js) body{overflow:auto}
 html:not(.js) [data-reveal]{opacity:1;transform:none}
 .mono{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
@@ -40,16 +40,13 @@ html:not(.js) [data-reveal]{opacity:1;transform:none}
 @keyframes grain{0%{transform:translate(0,0)}20%{transform:translate(-4%,3%)}40%{transform:translate(3%,-5%)}60%{transform:translate(-2%,4%)}80%{transform:translate(5%,-2%)}100%{transform:translate(0,0)}}
 .progress{position:fixed;top:0;left:0;height:2px;width:100%;background:#fff;z-index:80;transform:scaleX(0);transform-origin:left;mix-blend-mode:difference}
 /* курсор: белый с чёрной обводкой — виден и на чёрном, и на белом, без режимов наложения */
-.cur,.cur-ring{position:fixed;top:0;left:0;z-index:95;pointer-events:none;border-radius:50%;display:none;opacity:0}
-html.moved .cur,html.moved .cur-ring{opacity:1}
+.cur{position:fixed;top:0;left:0;z-index:2147483647;pointer-events:none;display:none;opacity:0;width:10px;height:10px;margin:-5px 0 0 -5px;border-radius:50%;background:#fff;box-shadow:0 0 0 2px #000,0 0 0 3px #fff;transition:opacity .3s,scale .2s var(--ease)}
+html.moved .cur{opacity:1}
+.cur.on{scale:1.5}
+.cur.down{scale:.75}
 [data-handle]{text-transform:none}
-.cur{width:8px;height:8px;margin:-4px 0 0 -4px;background:#fff;box-shadow:0 0 0 1.5px #000;transition:opacity .3s,scale .25s var(--ease)}
-.cur-ring{width:36px;height:36px;margin:-18px 0 0 -18px;border:1.5px solid #fff;box-shadow:0 0 0 1px #000,inset 0 0 0 1px #000;transition:opacity .3s,scale .25s var(--ease)}
-.cur-ring.on{scale:1.4}
-.cur.on{scale:.6}
-.cur-ring.down{scale:.8}
 @media (hover:hover) and (pointer:fine){
-  .cur,.cur-ring{display:block}
+  .cur{display:block}
   body,a,button{cursor:none}
 }
 

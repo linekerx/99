@@ -163,21 +163,13 @@ function startObservers() {
 const mouse = { x: innerWidth / 2, y: innerHeight / 2 };
 addEventListener("pointermove", (e) => { mouse.x = e.clientX; mouse.y = e.clientY; }, { passive: true });
 if (fine) {
-  const cur = $("#cur"), ring = $("#curRing");
-  let rx = mouse.x, ry = mouse.y, moving = false;
-  const loop = () => {
-    rx += (mouse.x - rx) * 0.3; ry += (mouse.y - ry) * 0.3;
-    cur.style.transform = `translate3d(${mouse.x}px,${mouse.y}px,0)`;
-    ring.style.transform = `translate3d(${rx}px,${ry}px,0)`;
-    if (Math.abs(mouse.x - rx) + Math.abs(mouse.y - ry) > 0.2) requestAnimationFrame(loop); else moving = false;
-  };
-  addEventListener("pointermove", () => { root.classList.add("moved"); if (!moving) { moving = true; requestAnimationFrame(loop); } }, { passive: true });
-  document.addEventListener("mouseover", (e) => {
-    const on = !!e.target.closest("[data-hover]");
-    ring.classList.toggle("on", on); cur.classList.toggle("on", on);
-  });
-  addEventListener("pointerdown", () => ring.classList.add("down"));
-  addEventListener("pointerup", () => ring.classList.remove("down"));
+  const cur = $("#cur");
+  let queued = false;
+  const draw = () => { queued = false; cur.style.transform = `translate3d(${mouse.x}px,${mouse.y}px,0)`; };
+  addEventListener("pointermove", () => { root.classList.add("moved"); if (!queued) { queued = true; requestAnimationFrame(draw); } }, { passive: true });
+  document.addEventListener("mouseover", (e) => cur.classList.toggle("on", !!e.target.closest("[data-hover]")));
+  addEventListener("pointerdown", () => cur.classList.add("down"));
+  addEventListener("pointerup", () => cur.classList.remove("down"));
   document.addEventListener("mouseleave", () => root.classList.remove("moved"));
 }
 
